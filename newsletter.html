@@ -1,5 +1,4 @@
-<!DOCTYPE html
-    PUBLIC "">
+<!DOCTYPE html PUBLIC "">
 <html xmlns="">
 
 <head>
@@ -8,15 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WARP HTML Email Template</title>
     <style type="text/css">
-        @import url('./fonts/Fontspring-DEMO-visbycf-regular.otf');
+        /* @import url('./fonts/Fontspring-DEMO-visbycf-regular.otf');
         @import url('./fonts/Fontspring-DEMO-visbycf-medium.otf');
         @import url('./fonts/Fontspring-DEMO-visbycf-demibold.otf');
-        @import url('./fonts/Fontspring-DEMO-visbycf-bold.otf');
+        @import url('./fonts/Fontspring-DEMO-visbycf-bold.otf'); */
+
+        @font-face {
+            font-family: vispy-reg;
+            src: url('./fonts/VisbyRegular.otf');
+        }
+
+        @font-face {
+            font-family: vispy-semibold;
+            src: url('./fonts/VisbySemibold.otf');
+        }
+
+        @font-face {
+            font-family: vispy-med;
+            src: url('./fonts/VisbyMedium.otf');
+        }
 
         body {
             margin: 0;
             background: whitesmoke;
-            font-family: 'Fontspring-DEMO-visbycf-regular', sans-serif;
+            font-family: vispy-reg;
+        }
+
+        .font-reg {
+            font-family: vispy-reg;
+        }
+
+        .font-semiB {
+            font-family: vispy-semibold;
+        }
+
+        .font-med {
+            font-family: vispy-med;
         }
 
         table {
@@ -76,6 +102,7 @@
         .bg-sky {
             background-color: #2D72D2;
         }
+
         .bg-pink {
             background-color: #EEECFF;
         }
@@ -146,6 +173,7 @@
             padding-right: 12px;
             padding-bottom: 4px;
         }
+
         .p-all-symmetry {
             padding-top: 10px;
             padding-left: 12px;
@@ -232,7 +260,7 @@
             transition: 1ms;
         }
 
-        .btn-secondary:hover{
+        .btn-secondary:hover {
             background: #e4b300;
         }
 
@@ -255,11 +283,12 @@
             font-weight: 500;
             line-height: 120%;
         }
-        .list-text{
+
+        .list-text {
             font-size: 16px;
-            font-family: 'Fontspring-DEMO-visbycf-bold', sans-serif;
-            /* font-style: normal;
-            font-weight: 500; */
+            font-family: vispy-reg;
+            font-style: normal;
+            font-weight: 500;
             line-height: 120%;
         }
     </style>
@@ -282,7 +311,7 @@
             </tr>
             <tr class="bg-white">
                 <td class="flex-center my-4">
-                    <p>WARP’s Most Popular Lanes for March 2024</p>
+                    <p class="font-semiB">WARP’s Most Popular Lanes for March 2024</p>
                 </td>
             </tr>
             <tr>
@@ -301,7 +330,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">Los Angeles to Houston</p>
+                    <p class="text-sm font-semiB">Los Angeles to Houston</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y w-3">
                     <div class="flex-row">
@@ -313,7 +342,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">Los Angeles to San Antonio</p>
+                    <p class="text-sm font-semiB">Los Angeles to San Antonio</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y w-3">
                     <div class="flex-row">
@@ -325,7 +354,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">Los Angeles to San Francisco</p>
+                    <p class="text-sm font-semiB">Los Angeles to San Francisco</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y w-3">
                     <div class="flex-row">
@@ -337,7 +366,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">Los Angeles to Dallas</p>
+                    <p class="text-sm font-semiB">Los Angeles to Dallas</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y w-3">
                     <div class="flex-row">
@@ -349,7 +378,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">Dallas - Houston</p>
+                    <p class="text-sm font-semiB">Dallas - Houston</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y w-3">
                     <div class="flex-row">
@@ -361,7 +390,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">Dallas - San Antonio</p>
+                    <p class="text-sm font-semiB">Dallas - San Antonio</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y w-3">
                     <div class="flex-row">
@@ -373,7 +402,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">Atlanta – Charlotte</p>
+                    <p class="text-sm font-semiB">Atlanta – Charlotte</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y w-3">
                     <div class="flex-row">
@@ -385,7 +414,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">Atlanta – Memphis</p>
+                    <p class="text-sm font-semiB">Atlanta – Memphis</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y w-3">
                     <div class="flex-row">
@@ -397,7 +426,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">San Francisco – New Jersey</p>
+                    <p class="text-sm font-semiB">San Francisco – New Jersey</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y w-3">
                     <div class="flex-row">
@@ -409,7 +438,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">San Francisco – New York</p>
+                    <p class="text-sm font-semiB">San Francisco – New York</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y w-3">
                     <div class="flex-row">
@@ -421,7 +450,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">San Francisco – Philadelphia</p>
+                    <p class="text-sm font-semiB">San Francisco – Philadelphia</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y">
                     <div class="flex-row">
@@ -433,7 +462,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">San Francisco – Los Angeles</p>
+                    <p class="text-sm font-semiB">San Francisco – Los Angeles</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y" style="width: 42%;">
                     <div class="flex-row">
@@ -445,7 +474,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">Miami – Orlando</p>
+                    <p class="text-sm font-semiB">Miami – Orlando</p>
                 </td>
                 <td class="bg-blue-400 p-all m-y" style="width: 42%;">
                     <div class="flex-row">
@@ -457,7 +486,7 @@
                             <img src="./images/location_on.svg" class="box-dim" alt="icon">
                         </div>
                     </div>
-                    <p class="text-sm">Miami – Tampa</p>
+                    <p class="text-sm font-semiB">Miami – Tampa</p>
                 </td>
             </tr>
             <tr class="bg-white">
@@ -467,61 +496,71 @@
             </tr>
             <tr class=" bg-white p-horz">
                 <td class="p-horz-b">
-                    <p>Pallets Processed Per Lane</p>
+                    <p class="font-semiB">Pallets Processed Per Lane</p>
                 </td>
             </tr>
             <tr class="flex-evenly bg-white p-horz">
                 <td class="bg-white w-4">
-                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">1854 <br> <span class="text-md">LAX –
+                    <p class="text-lg font-semiB" style="border-right: 1px solid #C0C0C0; ">1854 <br> <span
+                            class="text-md font-reg">LAX –
                             Houston</span></p>
                 </td>
                 <td class="bg-white w-4">
-                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">1389 <br> <span class="text-md">LAX –
+                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">1389 <br> <span
+                            class="text-md font-reg">LAX –
                             San Antonio</span></p>
                 </td>
                 <td class="bg-white w-4">
-                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2509 <br> <span class="text-md">LAX -
+                    <p class="text-lg font-semiB" style="border-right: 1px solid #C0C0C0; ">2509 <br> <span
+                            class="text-md font-reg">LAX -
                             San Francisco</span></p>
                 </td>
                 <td class="bg-white w-4">
-                    <p class="text-lg">1924 <br> <span class="text-md">LAX to Dallas</span></p>
+                    <p class="text-lg">1924 <br> <span class="text-md font-reg">LAX to Dallas</span></p>
                 </td>
                 <td class="bg-white w-4">
-                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2456 <br> <span class="text-md">Dallas
+                    <p class="text-lg font-semiB" style="border-right: 1px solid #C0C0C0; ">2456 <br> <span
+                            class="text-md font-reg">Dallas
                             – Houston</span></p>
                 </td>
                 <td class="bg-white w-4">
-                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2147 <br> <span class="text-md">Dallas
+                    <p class="text-lg font-semiB" style="border-right: 1px solid #C0C0C0; ">2147 <br> <span
+                            class="text-md font-reg">Dallas
                             – San Antonio</span></p>
                 </td>
                 <td class="bg-white w-4">
-                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">1636 <br> <span class="text-md">Atlanta
+                    <p class="text-lg font-semiB" style="border-right: 1px solid #C0C0C0; ">1636 <br> <span
+                            class="text-md font-reg">Atlanta
                             – Charlotte</span></p>
                 </td>
                 <td class="bg-white w-4">
-                    <p class="text-lg">1127 <br> <span class="text-md">Atlanta – Memphis</span></p>
+                    <p class="text-lg">1127 <br> <span class="text-md font-reg">Atlanta – Memphis</span></p>
                 </td>
                 <td class="bg-white w-4">
-                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2638 <br> <span class="text-md">San
+                    <p class="text-lg font-semiB" style="border-right: 1px solid #C0C0C0; ">2638 <br> <span
+                            class="text-md font-reg">San
                             Francisco – NJ</span></p>
                 </td>
                 <td class="bg-white w-4">
-                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2286 <br> <span class="text-md">San
+                    <p class="text-lg font-semiB" style="border-right: 1px solid #C0C0C0; ">2286 <br> <span
+                            class="text-md font-reg">San
                             Francisco – NY</span></p>
                 </td>
                 <td class="bg-white w-4">
-                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2041 <br> <span class="text-md">LAX –
+                    <p class="text-lg font-semiB" style="border-right: 1px solid #C0C0C0; ">2041 <br> <span
+                            class="text-md font-reg">LAX –
                             Houston</span></p>
                 </td>
                 <td class="bg-white w-4">
-                    <p class="text-lg">2319 <br> <span class="text-md">LAX – Houston</span></p>
+                    <p class="text-lg font-semiB">2319 <br> <span class="text-md">LAX – Houston</span></p>
                 </td>
                 <td class="bg-white" style="width: 50%; text-align: center;">
-                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2127 <br> <span class="text-md">LAX –
+                    <p class="text-lg font-semiB" style="border-right: 1px solid #C0C0C0; ">2127 <br> <span
+                            class="text-md font-reg">LAX –
                             Houston</span></p>
                 </td>
                 <td class="bg-white" style="width: 50%; text-align: center;">
-                    <p class="text-lg">1773 <br> <span class="text-md">LAX – Houston</span></p>
+                    <p class="text-lg font-semiB">1773 <br> <span class="text-md font-reg">LAX – Houston</span></p>
                 </td>
             </tr>
             <tr class="bg-white">
@@ -531,7 +570,8 @@
             </tr>
             <tr class="bg-white">
                 <td class="flex-center" style="margin-top: 10px;">
-                    <p class="p-horz-lg" style="font-size: 30px; text-align: center;">Are you looking to improve your
+                    <p class="p-horz-lg font-semiB" style="font-size: 30px; text-align: center;">Are you looking to
+                        improve your
                         <br> store's efficiency and profitability?
                     </p>
                 </td>
@@ -539,13 +579,14 @@
             <tr class="bg-white">
                 <td class="flex-center" style="margin-top: 10px;">
                     <button class="btn flex-center">
-                        <p class="btn-text">We can help!</p>
+                        <p class="btn-text font-semiB">We can help!</p>
                     </button>
                 </td>
             </tr>
             <tr class="bg-white">
                 <td class="flex-center" style="margin-top: 10px;">
-                    <p class="p-horz-lg body-head">W/:\RP is a leading provider of store replenishment solutions, and we
+                    <p class="p-horz-lg body-head font-semiB">W/:\RP is a leading provider of store replenishment
+                        solutions, and we
                         can help you:
                     </p>
                 </td>
@@ -553,15 +594,26 @@
             <tr class="bg-white">
                 <td class="flex-center p-horz-lg" style="margin-top: 10px;">
                     <ul class="list">
-                        <li class="list-text">Increase Sales: By ensuring timely and consistent restocking, you can accelerate your sell-through rate and get products on shelves faster. This means customers will have immediate access to the items they want, instead of waiting for them to be delivered from the backroom.</li>
-                        <li class="list-text" style="padding-top: 20px;">Lower Store Labor Costs: With W/:\RP, you can align your staff scheduling with custom delivery windows. This will help you optimize labor utilization and reduce costs.</li>
-                        <li class="list-text" style="padding-top: 20px;">Lower Delivery Costs: We utilize a variety of vehicle sizes, including SUVs, cargo vans, and box trucks, to ensure you get the most efficient delivery option for your needs. This can help you reduce your per pallet and per package costs.</li>
+                        <li class="list-text"> <span class="font-semiB">Increase Sales:</span> By ensuring timely and
+                            consistent restocking, you can
+                            accelerate your sell-through rate and get products on shelves faster. This means customers
+                            will have immediate access to the items they want, instead of waiting for them to be
+                            delivered from the backroom.</li>
+                        <li class="list-text" style="padding-top: 20px;"> <span class="font-semiB">Lower Store Labor
+                                Costs:</span> With W/:\RP, you can
+                            align your staff scheduling with custom delivery windows. This will help you optimize labor
+                            utilization and reduce costs.</li>
+                        <li class="list-text" style="padding-top: 20px;"> <span class="font-semiB">Lower Delivery
+                                Costs:</span> We utilize a variety of
+                            vehicle sizes, including SUVs, cargo vans, and box trucks, to ensure you get the most
+                            efficient delivery option for your needs. This can help you reduce your per pallet and per
+                            package costs.</li>
                     </ul>
                 </td>
             </tr>
             <tr class="bg-white">
                 <td class="" style="margin-top: 20px; text-align: start;">
-                    <p class="p-horz-lg body-head">Here's what some of our customers have achieved:</p>
+                    <p class="p-horz-lg body-head font-semiB">Here's what some of our customers have achieved:</p>
                 </td>
             </tr>
             <tr class="flex-evenly bg-white p-top p-horz">
@@ -569,13 +621,14 @@
                     <div class="flex-row">
                         <img src="./images/growth.svg" alt="growth" style="height: 60px; width: 60px;">
                     </div>
-                    <p class="">Increased sales <br> <span class="text-md">by up to 20%</span></p>
+                    <p class="font-semiB">Increased sales <br> <span class="text-md font-med">by up to 20%</span></p>
                 </td>
                 <td class="bg-pink flex-evenly p-all-symmetry m-y" style="width: 42%;">
                     <div class="flex-row">
                         <img src="./images/labourcost.svg" alt="growth" style="height: 60px; width: 60px;">
                     </div>
-                    <p class="">Reduced labor costs <br> <span class="text-md">by up to 20%</span></p>
+                    <p class="font-semiB">Reduced labor costs <br> <span class="text-md font-med">by up to 20%</span>
+                    </p>
                 </td>
             </tr>
             <tr>
@@ -586,7 +639,7 @@
             <tr class="bg-white">
                 <td class="flex-center" style="margin-top:40px;">
                     <button class="btn-secondary  flex-center">
-                        <p class="btn-text" style="color: #000;">Ship With W/:\RP</p>
+                        <p class="btn-text font-semiB" style="color: #000;">Ship With W/:\RP</p>
                         <img src="./images/rightarrow.svg" alt="arrow">
                     </button>
                 </td>
@@ -598,13 +651,16 @@
             </tr>
             <tr class="bg-white">
                 <td class="flex-center" style="margin-top: 10px;">
-                    <p class="p-horz-lg" style="font-size: 30px; text-align: center;">Streamline Your Freight <br> Shipping with W/:\RP
+                    <p class="p-horz-lg font-semiB" style="font-size: 30px; text-align: center;">Streamline Your Freight
+                        <br>
+                        Shipping with W/:\RP
                     </p>
                 </td>
             </tr>
             <tr class="bg-white">
                 <td class="flex-center" style="margin-top: 10px;">
-                    <p class="p-horz-lg body-head">W/:\RP is a leading provider of store replenishment solutions, and we
+                    <p class="p-horz-lg body-head font-semiB">W/:\RP is a leading provider of store replenishment
+                        solutions, and we
                         can help you:
                     </p>
                 </td>
@@ -612,23 +668,41 @@
             <tr class="bg-white">
                 <td class="flex-center p-horz-lg" style="margin-top: 10px;">
                     <ul class="list">
-                        <li class="list-text">Reduce Costs: We utilize a diversified fleet of vehicles, including straight trucks with liftgates, cargo vans, sedans, and traditional 53-foot trailers, and third-party cross docks. This allows us to optimize shipping costs by matching the right vehicle to your load.</li>
-                        <li class="list-text" style="padding-top: 20px;">Improve Efficiency: Our dynamic routing algorithms ensure optimized local pickups and deliveries, streamlining your supply chain.</li>
-                        <li class="list-text" style="padding-top: 20px;">Superior Tracking: Get real-time shipment visibility from the first to the last mile, with estimated arrival times (ETAs) for every stop.</li>
-                        <li class="list-text" style="padding-top: 20px;">Simplified Pricing: Unlike traditional LTL carriers that use a complex class system, W/:\RP offers per-pallet pricing, eliminating invoice surprises.</li>
+                        <li class="list-text"><span class="font-semiB">Reduce Costs:</span> We utilize a diversified
+                            fleet of vehicles, including
+                            straight trucks with liftgates, cargo vans, sedans, and traditional 53-foot trailers, and
+                            third-party cross docks. This allows us to optimize shipping costs by matching the right
+                            vehicle to your load.</li>
+                        <li class="list-text" style="padding-top: 20px;"><span class="font-semiB">Improve
+                                Efficiency:</span> Our dynamic routing
+                            algorithms ensure optimized local pickups and deliveries, streamlining your supply chain.
+                        </li>
+                        <li class="list-text" style="padding-top: 20px;"><span class="font-semiB">Superior
+                                Tracking:</span> Get real-time shipment
+                            visibility from the first to the last mile, with estimated arrival times (ETAs) for every
+                            stop.</li>
+                        <li class="list-text" style="padding-top: 20px;"><span class="font-semiB">Simplified
+                                Pricing:</span> Unlike traditional LTL
+                            carriers that use a complex class system, W/:\RP offers per-pallet pricing, eliminating
+                            invoice surprises.</li>
                     </ul>
                 </td>
             </tr>
             <tr class="bg-white">
                 <td class="" style="margin-top: 10px;">
-                    <p class="p-horz-lg body-head" style="font-size: 20px;"><span style="font-size: 12px;">Key Differences Between</span><br> W/:\RP and Traditional LTL Carriers</p>
+                    <p class="p-horz-lg body-head font-semiB" style="font-size: 20px;"><span style="font-size: 12px;" class="font-reg">Key
+                            Differences Between</span><br> W/:\RP and Traditional LTL Carriers</p>
                 </td>
             </tr>
             <tr class="bg-white">
                 <td class="flex-center p-horz-lg" style="margin-top: 10px;">
                     <ul class="list">
-                        <li class="list-text">Dense Local Networks and Line Haul Schedules: Both W/:\RP and traditional LTL carriers leverage this strategy for efficient scheduling and cost-effective pricing.</li>
-                        <li class="list-text" style="padding-top: 20px;">W/:\RP's Advantages: W/:\RP offers several advantages over traditional LTL carriers, including a diversified fleet, dynamic routing, superior tracking, and simplified pricing.</li>
+                        <li class="list-text"><span class="font-semiB">Dense Local Networks and Line Haul Schedules:</span> Both W/:\RP and traditional
+                            LTL carriers leverage this strategy for efficient scheduling and cost-effective pricing.
+                        </li>
+                        <li class="list-text" style="padding-top: 20px;"><span class="font-semiB">W/:\RP's Advantages:</span> W/:\RP offers several
+                            advantages over traditional LTL carriers, including a diversified fleet, dynamic routing,
+                            superior tracking, and simplified pricing.</li>
                     </ul>
                 </td>
             </tr>
@@ -640,32 +714,35 @@
             <tr class="bg-white">
                 <td class="flex-center" style="margin-top:40px;">
                     <button class="btn-secondary  flex-center">
-                        <p class="btn-text" style="color: #000;">Ship With Us</p>
+                        <p class="btn-text font-semiB" style="color: #000;">Ship With Us</p>
                         <img src="./images/rightarrow.svg" alt="arrow">
                     </button>
                 </td>
             </tr>
             <tr class=" bg-white p-horz">
-                <td class="p-horz-b" >
-                    <p style="margin-top: 90px; font-size: 12px;">P.S. Don't forget to follow us on social media for the latest industry trends and insights!</p>
+                <td class="p-horz-b">
+                    <p style="margin-top: 90px; font-size: 12px;" class="font-med">P.S. Don't forget to follow us on social media for the
+                        latest industry trends and insights!</p>
                 </td>
             </tr>
             <tr>
                 <td height="90" class="header" style="background-color: #F8C60F; padding-bottom: 10px;">
                     <div class="">
-                        <p style="text-align: center;">Connect with us</p>
+                        <p style="text-align: center;" class="font-semiB">Connect with us</p>
                         <div class="flex-center" style="gap: 16px;">
                             <a href="/">
                                 <img src="./images/x.svg" class="icon" alt="icon" style="height: 26px; width: 26px">
                             </a>
                             <a href="/">
-                                <img src="./images/Group 1000006732.svg" class="icon" alt="icon" style="height: 26px; width: 26px">
+                                <img src="./images/Group 1000006732.svg" class="icon" alt="icon"
+                                    style="height: 26px; width: 26px">
                             </a>
                             <a href="/">
                                 <img src="./images/insta.svg" class="icon" alt="icon" style="height: 26px; width: 26px">
                             </a>
                             <a href="/">
-                                <img src="./images/facebook.svg" class="icon" alt="icon" style="height: 26px; width: 26px">
+                                <img src="./images/facebook.svg" class="icon" alt="icon"
+                                    style="height: 26px; width: 26px">
                             </a>
 
                         </div>
