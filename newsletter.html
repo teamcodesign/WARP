@@ -1,0 +1,681 @@
+<!DOCTYPE html
+    PUBLIC "">
+<html xmlns="">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARP HTML Email Template</title>
+    <style type="text/css">
+        @import url('./fonts/Fontspring-DEMO-visbycf-regular.otf');
+        @import url('./fonts/Fontspring-DEMO-visbycf-medium.otf');
+        @import url('./fonts/Fontspring-DEMO-visbycf-demibold.otf');
+        @import url('./fonts/Fontspring-DEMO-visbycf-bold.otf');
+
+        body {
+            margin: 0;
+            background: whitesmoke;
+            font-family: 'Fontspring-DEMO-visbycf-regular', sans-serif;
+        }
+
+        table {
+            border-spacing: 0;
+        }
+
+        td {
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            table-layout: fixed;
+            background-color: bisque;
+            /* padding-top: 60px; */
+        }
+
+        .main {
+            width: 100%;
+            max-width: 600px;
+            /* background-color: #1802D0; */
+            font-family: sans-serif;
+            color: black;
+            box-shadow: 0 0 25px rgba(0, 0, 0, .15);
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon {
+            cursor: pointer;
+        }
+
+        .pattern-container {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            padding: 0 40px;
+            margin: -40px 0;
+        }
+
+        .bg-white {
+            background-color: white;
+        }
+
+        .bg-blue {
+            background-color: #1802D0;
+        }
+
+        .bg-sky {
+            background-color: #2D72D2;
+        }
+        .bg-pink {
+            background-color: #EEECFF;
+        }
+
+        .bg-blue-400 {
+            background-color: #F6F5FF;
+        }
+
+        .bg-red-400 {
+            background-color: #FAECEC;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* gap: 8px; */
+        }
+
+
+
+        .flex-evenly {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            /* gap: 8px; */
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            gap: 0;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .my-4 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .p-2 {
+            padding: 6px;
+        }
+
+        .m-y {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .m-y-4 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .p-top {
+            padding-top: 20px;
+        }
+
+        .pt-6 {
+            padding-top: 4px;
+        }
+
+        .p-all {
+            padding-top: 10px;
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-bottom: 4px;
+        }
+        .p-all-symmetry {
+            padding-top: 10px;
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-bottom: 10px;
+        }
+
+        .p-horz {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .p-horz-lg {
+            padding-left: 28px;
+            padding-right: 28px;
+        }
+
+        .p-horz-b {
+            padding-left: 28px;
+        }
+
+        .rounded-full {
+            border-radius: 100%;
+        }
+
+        .box-dim {
+            height: 20px;
+            width: 20px;
+        }
+
+        .road {
+            border: 1px dotted #2D72D2;
+            width: 35px;
+        }
+
+        .line {
+            border: 0.5px solid #42424D;
+        }
+
+        .text-sm {
+            font-size: 10px;
+        }
+
+        .text-md {
+            font-size: 12px;
+        }
+
+        .text-lg {
+            font-size: 30px;
+        }
+
+        .w-3 {
+            width: 26%;
+        }
+
+        .w-4 {
+            width: 22%;
+        }
+
+        .btn {
+            width: 200px;
+            height: 49px;
+            flex-shrink: 0;
+            border-radius: 4px;
+            background: #1802D0;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            transition: 1ms;
+        }
+
+        .btn-secondary {
+            width: 200px;
+            height: 49px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 4px;
+            background: #F8C60D;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            transition: 1ms;
+        }
+
+        .btn-secondary:hover{
+            background: #e4b300;
+        }
+
+        .btn:hover {
+            background: #0d0174;
+        }
+
+        .btn-text {
+            color: #FFF;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .body-head {
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+        }
+        .list-text{
+            font-size: 16px;
+            font-family: 'Fontspring-DEMO-visbycf-bold', sans-serif;
+            /* font-style: normal;
+            font-weight: 500; */
+            line-height: 120%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center class="wrapper">
+
+        <table class="main" width="100%">
+            <tr>
+                <td height="90" class="header" style="background-color: #1802D0;">
+                    <img src="./images/Icon.svg" class="icon" alt="icon">
+                </td>
+            </tr>
+            <tr>
+                <td class="pattern-container">
+                    <img src="./images/arrowpattern.svg" class="" alt="pattern">
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center my-4">
+                    <p>WARP’s Most Popular Lanes for March 2024</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="flex-center bg-white">
+                    <img src="./images/MostPopularLanes1.svg" class="" alt="banner">
+                </td>
+            </tr>
+            <tr class="flex-evenly bg-white p-top p-horz">
+                <td class="bg-blue-400 p-all m-y w-3">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">Los Angeles to Houston</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y w-3">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">Los Angeles to San Antonio</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y w-3">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">Los Angeles to San Francisco</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y w-3">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">Los Angeles to Dallas</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y w-3">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">Dallas - Houston</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y w-3">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">Dallas - San Antonio</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y w-3">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">Atlanta – Charlotte</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y w-3">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">Atlanta – Memphis</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y w-3">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">San Francisco – New Jersey</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y w-3">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">San Francisco – New York</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y w-3">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">San Francisco – Philadelphia</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">San Francisco – Los Angeles</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y" style="width: 42%;">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">Miami – Orlando</p>
+                </td>
+                <td class="bg-blue-400 p-all m-y" style="width: 42%;">
+                    <div class="flex-row">
+                        <div class="bg-white border-radius p-2 box-dim rounded-full">
+                            <div class="bg-sky box-dim rounded-full"></div>
+                        </div>
+                        <div class="road"></div>
+                        <div class="bg-red-400 border-radius p-2 box-dim rounded-full flex-center">
+                            <img src="./images/location_on.svg" class="box-dim" alt="icon">
+                        </div>
+                    </div>
+                    <p class="text-sm">Miami – Tampa</p>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center">
+                    <div class="line m-y-4" style="width: 90%;"></div>
+                </td>
+            </tr>
+            <tr class=" bg-white p-horz">
+                <td class="p-horz-b">
+                    <p>Pallets Processed Per Lane</p>
+                </td>
+            </tr>
+            <tr class="flex-evenly bg-white p-horz">
+                <td class="bg-white w-4">
+                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">1854 <br> <span class="text-md">LAX –
+                            Houston</span></p>
+                </td>
+                <td class="bg-white w-4">
+                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">1389 <br> <span class="text-md">LAX –
+                            San Antonio</span></p>
+                </td>
+                <td class="bg-white w-4">
+                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2509 <br> <span class="text-md">LAX -
+                            San Francisco</span></p>
+                </td>
+                <td class="bg-white w-4">
+                    <p class="text-lg">1924 <br> <span class="text-md">LAX to Dallas</span></p>
+                </td>
+                <td class="bg-white w-4">
+                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2456 <br> <span class="text-md">Dallas
+                            – Houston</span></p>
+                </td>
+                <td class="bg-white w-4">
+                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2147 <br> <span class="text-md">Dallas
+                            – San Antonio</span></p>
+                </td>
+                <td class="bg-white w-4">
+                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">1636 <br> <span class="text-md">Atlanta
+                            – Charlotte</span></p>
+                </td>
+                <td class="bg-white w-4">
+                    <p class="text-lg">1127 <br> <span class="text-md">Atlanta – Memphis</span></p>
+                </td>
+                <td class="bg-white w-4">
+                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2638 <br> <span class="text-md">San
+                            Francisco – NJ</span></p>
+                </td>
+                <td class="bg-white w-4">
+                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2286 <br> <span class="text-md">San
+                            Francisco – NY</span></p>
+                </td>
+                <td class="bg-white w-4">
+                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2041 <br> <span class="text-md">LAX –
+                            Houston</span></p>
+                </td>
+                <td class="bg-white w-4">
+                    <p class="text-lg">2319 <br> <span class="text-md">LAX – Houston</span></p>
+                </td>
+                <td class="bg-white" style="width: 50%; text-align: center;">
+                    <p class="text-lg" style="border-right: 1px solid #C0C0C0; ">2127 <br> <span class="text-md">LAX –
+                            Houston</span></p>
+                </td>
+                <td class="bg-white" style="width: 50%; text-align: center;">
+                    <p class="text-lg">1773 <br> <span class="text-md">LAX – Houston</span></p>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center">
+                    <div class="line m-y-4" style="width: 90%;"></div>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center" style="margin-top: 10px;">
+                    <p class="p-horz-lg" style="font-size: 30px; text-align: center;">Are you looking to improve your
+                        <br> store's efficiency and profitability?
+                    </p>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center" style="margin-top: 10px;">
+                    <button class="btn flex-center">
+                        <p class="btn-text">We can help!</p>
+                    </button>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center" style="margin-top: 10px;">
+                    <p class="p-horz-lg body-head">W/:\RP is a leading provider of store replenishment solutions, and we
+                        can help you:
+                    </p>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center p-horz-lg" style="margin-top: 10px;">
+                    <ul class="list">
+                        <li class="list-text">Increase Sales: By ensuring timely and consistent restocking, you can accelerate your sell-through rate and get products on shelves faster. This means customers will have immediate access to the items they want, instead of waiting for them to be delivered from the backroom.</li>
+                        <li class="list-text" style="padding-top: 20px;">Lower Store Labor Costs: With W/:\RP, you can align your staff scheduling with custom delivery windows. This will help you optimize labor utilization and reduce costs.</li>
+                        <li class="list-text" style="padding-top: 20px;">Lower Delivery Costs: We utilize a variety of vehicle sizes, including SUVs, cargo vans, and box trucks, to ensure you get the most efficient delivery option for your needs. This can help you reduce your per pallet and per package costs.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="" style="margin-top: 20px; text-align: start;">
+                    <p class="p-horz-lg body-head">Here's what some of our customers have achieved:</p>
+                </td>
+            </tr>
+            <tr class="flex-evenly bg-white p-top p-horz">
+                <td class="bg-pink flex-evenly p-all-symmetry m-y" style="width: 42%;">
+                    <div class="flex-row">
+                        <img src="./images/growth.svg" alt="growth" style="height: 60px; width: 60px;">
+                    </div>
+                    <p class="">Increased sales <br> <span class="text-md">by up to 20%</span></p>
+                </td>
+                <td class="bg-pink flex-evenly p-all-symmetry m-y" style="width: 42%;">
+                    <div class="flex-row">
+                        <img src="./images/labourcost.svg" alt="growth" style="height: 60px; width: 60px;">
+                    </div>
+                    <p class="">Reduced labor costs <br> <span class="text-md">by up to 20%</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="flex-center bg-white p-top">
+                    <img src="./images/chart.svg" class="" alt="banner">
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center" style="margin-top:40px;">
+                    <button class="btn-secondary  flex-center">
+                        <p class="btn-text" style="color: #000;">Ship With W/:\RP</p>
+                        <img src="./images/rightarrow.svg" alt="arrow">
+                    </button>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center">
+                    <div class="line m-y-4" style="width: 90%;"></div>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center" style="margin-top: 10px;">
+                    <p class="p-horz-lg" style="font-size: 30px; text-align: center;">Streamline Your Freight <br> Shipping with W/:\RP
+                    </p>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center" style="margin-top: 10px;">
+                    <p class="p-horz-lg body-head">W/:\RP is a leading provider of store replenishment solutions, and we
+                        can help you:
+                    </p>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center p-horz-lg" style="margin-top: 10px;">
+                    <ul class="list">
+                        <li class="list-text">Reduce Costs: We utilize a diversified fleet of vehicles, including straight trucks with liftgates, cargo vans, sedans, and traditional 53-foot trailers, and third-party cross docks. This allows us to optimize shipping costs by matching the right vehicle to your load.</li>
+                        <li class="list-text" style="padding-top: 20px;">Improve Efficiency: Our dynamic routing algorithms ensure optimized local pickups and deliveries, streamlining your supply chain.</li>
+                        <li class="list-text" style="padding-top: 20px;">Superior Tracking: Get real-time shipment visibility from the first to the last mile, with estimated arrival times (ETAs) for every stop.</li>
+                        <li class="list-text" style="padding-top: 20px;">Simplified Pricing: Unlike traditional LTL carriers that use a complex class system, W/:\RP offers per-pallet pricing, eliminating invoice surprises.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="" style="margin-top: 10px;">
+                    <p class="p-horz-lg body-head" style="font-size: 20px;"><span style="font-size: 12px;">Key Differences Between</span><br> W/:\RP and Traditional LTL Carriers</p>
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center p-horz-lg" style="margin-top: 10px;">
+                    <ul class="list">
+                        <li class="list-text">Dense Local Networks and Line Haul Schedules: Both W/:\RP and traditional LTL carriers leverage this strategy for efficient scheduling and cost-effective pricing.</li>
+                        <li class="list-text" style="padding-top: 20px;">W/:\RP's Advantages: W/:\RP offers several advantages over traditional LTL carriers, including a diversified fleet, dynamic routing, superior tracking, and simplified pricing.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="flex-center bg-white p-top">
+                    <img src="./images/difference.svg" class="" alt="banner">
+                </td>
+            </tr>
+            <tr class="bg-white">
+                <td class="flex-center" style="margin-top:40px;">
+                    <button class="btn-secondary  flex-center">
+                        <p class="btn-text" style="color: #000;">Ship With Us</p>
+                        <img src="./images/rightarrow.svg" alt="arrow">
+                    </button>
+                </td>
+            </tr>
+            <tr class=" bg-white p-horz">
+                <td class="p-horz-b" >
+                    <p style="margin-top: 90px; font-size: 12px;">P.S. Don't forget to follow us on social media for the latest industry trends and insights!</p>
+                </td>
+            </tr>
+            <tr>
+                <td height="90" class="header" style="background-color: #F8C60F; padding-bottom: 10px;">
+                    <div class="">
+                        <p style="text-align: center;">Connect with us</p>
+                        <div class="flex-center" style="gap: 16px;">
+                            <a href="/">
+                                <img src="./images/x.svg" class="icon" alt="icon" style="height: 26px; width: 26px">
+                            </a>
+                            <a href="/">
+                                <img src="./images/Group 1000006732.svg" class="icon" alt="icon" style="height: 26px; width: 26px">
+                            </a>
+                            <a href="/">
+                                <img src="./images/insta.svg" class="icon" alt="icon" style="height: 26px; width: 26px">
+                            </a>
+                            <a href="/">
+                                <img src="./images/facebook.svg" class="icon" alt="icon" style="height: 26px; width: 26px">
+                            </a>
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table> <!-- End Main Class -->
+
+    </center> <!-- End Wrapper -->
+
+</body>
+
+</html>
